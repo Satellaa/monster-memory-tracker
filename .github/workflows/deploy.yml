@@ -29,13 +29,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout monster-memory-tracker
+        uses: actions/checkout@v4
       - name: Checkout monster-memory-cases
         uses: actions/checkout@v4
         with:
           repository: Satellaa/monster-memory-cases
           path: monster-memory-cases
-      - name: Checkout monster-memory-tracker
-        uses: actions/checkout@v4
       - name: Detect package manager
         id: detect-package-manager
         run: |
